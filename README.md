@@ -27,7 +27,7 @@ Steps for creating VNet:
 
 ![AltText](a1.png)
 
-![AltText](a2.png)
+![AltText](a2a.png)
 
 ![AltText](a3.png)
 
