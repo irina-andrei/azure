@@ -9,95 +9,151 @@
 
 <br>
 
+### Comparisons to AWS:
+* What we call *VPCs* in AWS, in Azure they are called **Virtual Networks** (*V Nets*).
+* There are also Resource Groups in AWS, but we didn't need to use them.
+* With AWS, Availability Zones in a Region are not limited to 3. In Azure, AZs per region - maximum of 3 (some have 1 or 2). 
+* In Azure, zone = data center.
+
+<br>
+
 ### Important points:
-* In Azure, what we call VPCs in AWS here they are called **Virtual Networks** (*V Nets*).
+```diagram placeholder```
+![AltText](Images/diagram.png)
+
 * Management Groups = a way to manage and access company polices for multiple subscriptions.
 * Subscriptions = payment account/methods/scheme.
 * All resources need to be inside *a Resource Group*. 
-* There are also Resource Groups in AWS, but we didn't need to use them.
 * With these layers (**Scopes**), we apply policies/permissions/compliance. You can set *different policies or permissions for each Scope.* 
+* We will add *'owner'* tag (with our Name) to each resource we create.
+* *Azure Firewall* - a very expensive service (cheapest version **£250/month**)
+* The interface in Azure is called **The Azure Portal** 
 * **Active Directory** => Microsoft's proprietary directory service; it essentially controlls users' ecosystem and enables administrators to manage permissions and control access to network resources. 
-* **SLA (Service Level Agreement)**: guarantees the more they fall short, the more money you can ask back. 
+* **SLA (Service Level Agreement)**: guarantees the more they fall short, the more money you can ask back:
+
+![AltText](Images/cloud-advantage-service-credit.png)
 
 
 
 <br>
 
-Steps for creating VNet:
+### Steps for creating VNet:
 
-![AltText](a1.png)
+1. First, add your SSH key:
 
-![AltText](a2a.png)
+![AltText](Images/a1.png)
 
-![AltText](a3.png)
+2. Creating your SSH key:
 
-![AltText](a4.png)
+![AltText](Images/a2a.png)
 
-![AltText](a5.png)
+3. We will add *'owner'* tag (with our Name) to each resource we create: 
 
-![AltText](a6.png)
+![AltText](Images/a3.png)
 
-![AltText](a7.png)
+4. Double check all the fields, then press Create:
 
-![AltText](a8.png)
+![AltText](Images/a4.png)
 
-![AltText](a9.png)
+5. Next we will create the 'VNet':
 
-![AltText](a10.png)
+![AltText](Images/a5.png)
 
-![AltText](a11.png)
+6. Click on Create:
 
-![AltText](a12.png)
+![AltText](Images/a6.png)
 
-![AltText](a13.png)
+7. Enter resource group, VNet name and Region:
+
+![AltText](Images/a7.png)
+
+8. Add Public Subnet:
+
+![AltText](Images/a8.png)
+
+9. Add Private Subnet:
+
+![AltText](Images/a9.png)
+
+10. The CIDR Blocks and Subnets:
+
+![AltText](Images/a10.png)
+
+11. Add resource tag for your name:
+
+![AltText](Images/a11.png)
+
+12. Check all information entered, then press Create:
+
+![AltText](Images/a12.png)
+
+13. It will confirm 'Deployment succeeded':
+
+![AltText](Images/a13.png)
 
 <br>
 
-Steps for Spinning Up an Instance with the App running:
+### Steps for Spinning Up an Instance with the App running:
 
-![AltText](a14.png)
+1. Go to Virtual Machines:
 
-![AltText](a15.png)
+![AltText](Images/a14.png)
 
-![AltText](a16.png)
+2. Click Create:
 
-![AltText](a17.png)
+![AltText](Images/a15.png)
 
-![AltText](a18.png)
+3. Select Azure virtual machine:
 
-![AltText](a19.png)
+![AltText](Images/a16.png)
 
-![AltText](a20_in_case_of_bug.png)
+4. Search for `ubuntu pro 18.04 lts`:
 
-![AltText](a21.png)
+![AltText](Images/a17.png)
 
-![AltText](a23.png)
+5. Select Gen2:
 
-![AltText](a24.png)
+![AltText](Images/a18.png)
 
-![AltText](a25.png)
+6. You will get this error, select 'Standard' for Security Type:
 
-![AltText](a26.png)
+![AltText](Images/a19.png)
 
-![AltText](a27.png)
+7. In case you have a bug when selecting this, go to Marketplace and search for `ubuntu pro 18.04 lts`:
 
-![AltText](a27_2.png)
+![AltText](Images/a20_in_case_of_bug.png)
 
-![AltText](a36_user_data.png)
+8. Select VM size:
 
-![AltText](a28.png)
+![AltText](Images/a21.png)
 
-![AltText](a30.png)
+9. To recap, select Resource group, VM name, region, Availability zone:
 
-![AltText](a31.png)
+![AltText](Images/a23.png)
 
-![AltText](a32.png)
+10. Size:
 
-![AltText](a33.png)
+![AltText](Images/a24.png)
 
-![AltText](a34.png)
+11. Change to `admin user` and choose your security key:
 
-![AltText](a35.png)
+![AltText](Images/a25.png)
+
+12. Choose ports: 
+
+![AltText](Images/a26.png)
+
+13. Choose Standard SSD:
+
+![AltText](Images/a27.png)
+
+14. Delete with VM:
+
+![AltText](Images/a27_2.png)
+
+15. Add User Data:
+
+![AltText](Images/a36_user_data.png)
 
 ```shell
 
@@ -154,6 +210,34 @@ pm2 start app.js
 # restart the app
 pm2 restart app.js
 ```
+
+
+16. Select VNet, subnet, Public IP and choose delete:
+
+![AltText](Images/a28.png)
+
+17. Add Name Tag:
+
+![AltText](Images/a30.png)
+
+18. Check all information is correct, then click Create:
+
+![AltText](Images/a31.png)
+
+![AltText](Images/a32.png)
+
+19. Confirmation of deployment complete:
+
+![AltText](Images/a33.png)
+
+20. Your VM:
+
+![AltText](Images/a34.png)
+
+21. If you want to remove VM, click Delete:
+
+![AltText](Images/a35.png)
+
 
 <br>
 
