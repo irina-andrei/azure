@@ -46,6 +46,16 @@ In the fourth quarter of 2022, the most popular vendor in the cloud infrastructu
 
 <br>
 
+### System Routes
+System routes are the routes that Azure automatically creates and assigns to each subnet in a virtual network. You can't create or remove system routes, but you can override some of them with custom routes.
+
+By default, Azure creates the following system routes for each subnet:
+
+![AltText](Images/routes.png)
+
+
+<br>
+
 ### How to make rules stricter on Database security group:
 
 Update rules to lock down network security group in the database VM:  
@@ -85,3 +95,4 @@ This will delete the public IP address on your app VM.
 Sources:
 - [Active Directory](https://www.lepide.com/blog/what-is-active-directory-and-how-does-it-work/)
 - [Worldwide Cloud Services Market share](https://www.statista.com/statistics/967365/worldwide-cloud-infrastructure-services-market-share-vendor/)
+- [Virtual Networks - microsoft.com](https://learn.microsoft.com/en-us/azure/virtual-network/virtual-networks-udr-overview)
