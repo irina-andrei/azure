@@ -34,6 +34,10 @@ In the fourth quarter of 2022, the most popular vendor in the cloud infrastructu
 
 <br>
 
+![AltText](Images/2tier_diagram_azure.png)
+
+<br>
+
 ### Comparisons to AWS:
 * What we call *VPCs* in AWS, in Azure they are called **Virtual Networks** (*V Nets*).
 * There are also Resource Groups in AWS, but we didn't need to use them.
