@@ -19,6 +19,7 @@
 * We will add *'owner'* tag (with our Name) to each resource we create.
 * *Azure Firewall* - a very expensive service (cheapest version **£250/month**)
 * The interface in Azure is called **The Azure Portal** 
+* 
 * **Active Directory** => Microsoft's proprietary directory service; it essentially controlls users' ecosystem and enables administrators to manage permissions and control access to network resources. 
 * **SLA (Service Level Agreement)**: guarantees the more they fall short, the more money you can ask back:
 
@@ -96,3 +97,4 @@ Sources:
 - [Active Directory](https://www.lepide.com/blog/what-is-active-directory-and-how-does-it-work/)
 - [Worldwide Cloud Services Market share](https://www.statista.com/statistics/967365/worldwide-cloud-infrastructure-services-market-share-vendor/)
 - [Virtual Networks - microsoft.com](https://learn.microsoft.com/en-us/azure/virtual-network/virtual-networks-udr-overview)
+- [NSG - microsoft.com](https://learn.microsoft.com/en-us/azure/virtual-network/network-security-groups-overview)
