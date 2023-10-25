@@ -46,6 +46,42 @@ In the fourth quarter of 2022, the most popular vendor in the cloud infrastructu
 
 <br>
 
+### How to make rules stricter on Database security group:
+
+Update rules to lock down network security group in the database VM:  
+* Allow SSH source only from our app virtual machine or public subnet.
+* Allow MongoDB source only from app virtual machine.
+* Add inbound port rule: Make priority higher than the 3 default ones so it blocks the default rules.
+
+![AltText](Images/secure_nsg1.png)
+
+![AltText](Images/secure_nsg2.png)
+
+
+<br>
+
+### How to Unassociate a public IP address from a NIC (Network Interface Controller):
+This will delete the public IP address on your app VM.
+
+1. On your VM Overview page, click on Network Interface:
+
+![AltText](Images/remove_ip_1.png)
+
+2. Then, Click on Configure your IPs:
+
+![AltText](Images/remove_ip_2.png)
+
+3. Click on `ipconfig1`:
+
+![AltText](Images/remove_ip_3.png)
+
+4. Untick the public IP address box, then click Save:
+
+![AltText](Images/remove_ip_4.png)
+
+
+<br>
+
 Sources:
 - [Active Directory](https://www.lepide.com/blog/what-is-active-directory-and-how-does-it-work/)
 - [Worldwide Cloud Services Market share](https://www.statista.com/statistics/967365/worldwide-cloud-infrastructure-services-market-share-vendor/)

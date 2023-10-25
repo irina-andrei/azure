@@ -5,7 +5,39 @@
 
 ## Database VM
 
-User Data: 
+1. Go to Virtual Machines:
+
+![AltText](Images/a14.png)
+
+2. Click Create:
+
+![AltText](Images/a15.png)
+
+3. Select Azure virtual machine:
+
+![AltText](Images/a16.png)
+
+4. Search for `ubuntu pro 18.04 lts`:
+
+![AltText](Images/a17.png)
+
+5. Select Gen2:
+
+![AltText](Images/a18.png)
+
+6. You will get this error, select 'Standard' for Security Type:
+
+![AltText](Images/a19.png)
+
+7. In case you have a bug when selecting this, go to Marketplace and search for `ubuntu pro 18.04 lts`:
+
+![AltText](Images/a20_in_case_of_bug.png)
+
+8. Select VM size:
+
+![AltText](Images/a21.png)
+
+9. User Data: 
 
 ```shell
 #!/bin/bash
