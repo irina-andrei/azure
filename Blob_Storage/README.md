@@ -32,7 +32,7 @@
 
 ## Types of Redundancy ( = having backups):
 
-#### **LRS - Locally Redundant Storage**
+### **LRS - Locally Redundant Storage**
 
 ![AltText](Images/LRS.png)
 
