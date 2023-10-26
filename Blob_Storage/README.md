@@ -1,34 +1,31 @@
 # Blob Storage
 
-Blob storage in Azure is a service that allows you to store large amounts of unstructured data such as text, images, audio, video or any other kind of binary data. 
+**Blob storage in Azure** is a service that allows you to *store large amounts of unstructured data* such as text, images, audio, video or any other kind of binary data. 
 
-```
-diagram placeholder
-```
+
 
 ### Blob storage has three types of resources: 
-1. storage accounts = a unique namespace that contains your data. 
-2. containers = a logical grouping of blobs within a storage account (*equivalent of Buckets in AWS S3*).
-3. blobs = an individual object that can be accessed by a URL.
+
+![AltText](Images/blob_diagram.png)
+
+1. **Storage accounts** = a unique namespace that contains your data. 
+2. **Containers** = a logical grouping of blobs within a storage account (*equivalent of Buckets in AWS S3*).
+3. **Blobs** = an individual object that can be accessed by a URL.
 
 <br>
 
 ### Access Tiers (depending on how often you access the file):
-1. Hot Tier
-Access: Frequent
--> cheaper to access
--> really quick to access 
+1. **Hot Tier** (Access: *Frequent*)
+* cheaper to access
+* really quick to load
 
-2. Cool/Cold
-Access: Medium 
--> costs more to access
--> takes longer to access
+2. **Cold Tier** (Access: *Medium*)
+* costs more to access
+* takes longer to load
 
-3. Archival
-archival storage is the cheapest form of storage in blob storage
-Access: months/years in between accessing
--> takes a really long time to accesss (hours)
--> cheapest tier
+3. **Archival Tier** (Access: *months/years in between accessing*)
+* cheapest tier
+* takes a really long time to load (hours)
 
 <br>
 
@@ -105,7 +102,7 @@ ps aux | grep node
 ```
 ![AltText](Images/4.png)
 
-6. You can now try to kill it using `sudo kill`, but it will stil show up with a different Pricess ID:
+6. You can now try to kill it using `sudo kill`, but it will stil show up with a different Process ID:
 
 ```shell
 sudo kill -9 17169
@@ -156,5 +153,6 @@ az login
 <br>
 
 Sources:
-
+- [Blobs - microsoft.com](https://azure.microsoft.com/en-us/products/storage/blobs/)
+- [Introduction to Blobs - microsoft.com](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blobs-introduction)
 - [Install Azure CLI - microsoft.com](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
