@@ -16,15 +16,15 @@
 
 ## Access Tiers (depending on how often you access the file):
 1. **Hot Tier** (Access: *Frequent*)
-* cheaper to access
+* *cheaper to access* (but more expensive to store)
 * really quick to load
 
 2. **Cold Tier** (Access: *Medium*)
-* costs more to access
+* *costs more to access* (but not as expensive to store)
 * takes longer to load
 
 3. **Archival Tier** (Access: *months/years in between accessing*)
-* cheapest tier
+* *cheapest tier* (costs the least to store, but costs more when you do access)
 * takes a really long time to load (hours)
 
 <br>
@@ -34,22 +34,22 @@
 
 **LRS - Locally Redundant Storage**
 
-![AltText](Images/LRS.png)
+![AltText](Images/LRs.png)
 
-- cheapest
-- storing in only one data center (Availability Zone) 
-- puts 3 copies in 1 data center
+- **cheapest**
+- storing in only *one data center* (Availability Zone) 
+- puts *3 copies in 1 data center*
 
-**ZRS - Zone redundant storage**
+**ZRS - Zone Redundant Storage**
 
-![AltText](Images/ZRS.png)
+![AltText](Images/ZRs.png)
 
-- more expensive
-- 3 copies of blob, one in each data center (Availability Zone) 
+- **more expensive**
+- *3 copies of blob*, one in *each data center* (Availability Zone) 
 
 <br>
 
-### Other important points:
+### Other Important Points:
 * You can access this through either Azure Powershell (similar to WCP - Windows Command Prompt) or Azure CLI (which is a little bit more like Linux). Both can run commands.
 * Every command starts with `az`.
 * In our script, we will create storage account, create a container, get a blob, download it and upload it to container we made, then give public access to the blob. Then in our app files, we will change 'views - index' file to add that blob (which is a .jpg) to the home page of our app (this will be linked straight to the blob location).
@@ -108,14 +108,14 @@ ps aux | grep node
 ```
 ![AltText](Images/4.png)
 
-6. You can now try to kill it using `sudo kill`, but it will stil show up with a different Process ID:
+6. The App was started through User Data, so that's why 'user' shows as `root`. You can now try to kill it using `sudo kill`, but it will still pop back up with a different Process ID:
 
 ```shell
 sudo kill -9 17169
 ```
 ![AltText](Images/9.png)
 
-10. You need to kill `pm2`:
+10. What you need to do is to to kill `pm2`, which will allow you to start the App from 'adminuser' without problems:
 
 ![AltText](Images/12.png)
 
@@ -129,6 +129,7 @@ sudo kill -9 17169
 ```shell
 curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 ```
+![AltText](Images/14.png)
 
 2. To Login: 
 
@@ -138,7 +139,7 @@ az login
 
 ![AltText](Images/10.png)
 
-3. On the Link: 
+3. On the Link, you will have to enter the code from the console: 
 
 ![AltText](Images/5.png)
 
