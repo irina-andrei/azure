@@ -14,7 +14,7 @@
 
 <br>
 
-### Access Tiers (depending on how often you access the file):
+## Access Tiers (depending on how often you access the file):
 1. **Hot Tier** (Access: *Frequent*)
 * cheaper to access
 * really quick to load
@@ -30,14 +30,20 @@
 <br>
 
 
-### Types of Redundancy ( = having backups):
+## Types of Redundancy ( = having backups):
 
 **LRS - Locally Redundant Storage**
+
+![AltText](Images/LRS.png)
+
 - cheapest
 - storing in only one data center (Availability Zone) 
 - puts 3 copies in 1 data center
 
 **ZRS - Zone redundant storage**
+
+![AltText](Images/ZRS.png)
+
 - more expensive
 - 3 copies of blob, one in each data center (Availability Zone) 
 
@@ -51,7 +57,7 @@
 
 <br>
 
-### Steps:
+## Steps:
 
 1. Connect through SSH to your VM that is running the App (which was started through User Data using PM2).
 
