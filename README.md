@@ -44,6 +44,7 @@ In the fourth quarter of 2022, the most popular vendor in the cloud infrastructu
 * There are also Resource Groups in AWS, but we didn't need to use them.
 * With AWS, Availability Zones in a Region are not limited to 3. In Azure, AZs per region - maximum of 3 (some have 1 or 2). 
 * In Azure, zone = data center.
+* In Azure, bucket = container.
 
 <br>
 
