@@ -34,7 +34,7 @@
 
 **LRS - Locally Redundant Storage**
 
-![AltText](Images/LRs.png)
+![AltText](Images/LRS.png)
 
 - **cheapest**
 - storing in only *one data center* (Availability Zone) 
@@ -42,7 +42,7 @@
 
 **ZRS - Zone Redundant Storage**
 
-![AltText](Images/ZRs.png)
+![AltText](Images/ZRS.png)
 
 - **more expensive**
 - *3 copies of blob*, one in *each data center* (Availability Zone) 
