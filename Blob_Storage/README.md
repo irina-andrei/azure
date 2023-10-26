@@ -32,7 +32,7 @@
 
 ## Types of Redundancy ( = having backups):
 
-**LRS - Locally Redundant Storage**
+#### **LRS - Locally Redundant Storage**
 
 ![AltText](Images/LRS.png)
 
@@ -40,7 +40,7 @@
 - storing in only *one data center* (Availability Zone) 
 - puts *3 copies in 1 data center*
 
-**ZRS - Zone Redundant Storage**
+### **ZRS - Zone Redundant Storage**
 
 ![AltText](Images/ZRS.png)
 
