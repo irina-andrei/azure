@@ -191,7 +191,7 @@ curl -O https://img.freepik.com/free-photo/cyber-cat-with-giant-electro-flowers-
 mv cyber-cat-with-giant-electro-flowers-sunrise-generative-ai_8829-2880.jpg cat.jpg
 ```
 
-4. Upload the photo as a blob:
+5. Upload the photo as a blob:
 
 ```shell
 az storage blob upload \
@@ -204,7 +204,7 @@ az storage blob upload \
 
 ![AltText](Images/upload.png)
 
-5. If you want to see it has been uploaded successfully, go to Storage and click on your container:
+6. If you want to see it has been uploaded successfully, go to Storage and click on your container:
 
 ![AltText](Images/storage.png)
 
@@ -213,26 +213,30 @@ az storage blob upload \
 
 ![AltText](Images/blobs.png)
 
-6. Go to the location of the `index.ejs` where we will modify it to display the `cat.jpg` photo on the Home Page:
+7. Change the access level of the blob:
+
+![AltText](Images/access.png)
+
+8. Go to the location of the `index.ejs` where we will modify it to display the `cat.jpg` photo on the Home Page:
 
 ```shell
 cd /ci_cd/app/views
 ```
 
-6. You can try modifying the `index.ejs` file with the `sed` command:
+9. You can try modifying the `index.ejs` file with the `sed` command:
 
 ```shell
 sed -i 's|</h2>|</h2><img src="
 https://tech254irinastorage.blob.core.windows.net/testcontainer/newcat.jpg">|' index.ejs
 ```
 
-7. If it doesn't work, you can modify it manually:
+10. If it doesn't work, you can modify it manually:
 
 ```shell
 sudo nano index.ejs
 ```
 
-8. Add the image code to the file:
+11. Add the image code to the file:
 
 ```shell
 <img src="https://tech254irinastorage.blob.core.windows.net/testcontainer/newcat.jpg">
@@ -240,7 +244,7 @@ sudo nano index.ejs
 
 ![AltText](Images/nano_index.png)
 
-8. Restart the app for your modification to be displayed: 
+12. Restart the app for your modification to be displayed: 
 
 ```shell
 pm2 restart app.js
