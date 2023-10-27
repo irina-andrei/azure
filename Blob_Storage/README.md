@@ -213,7 +213,7 @@ az storage blob upload \
 
 ![AltText](Images/blobs.png)
 
-7. Change the access level of the blob:
+7. Click on 'Change access level' and change the access of the blob:
 
 ![AltText](Images/access.png)
 
