@@ -253,3 +253,5 @@ Sources:
 - [Blobs - microsoft.com](https://azure.microsoft.com/en-us/products/storage/blobs/)
 - [Introduction to Blobs - microsoft.com](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blobs-introduction)
 - [Install Azure CLI - microsoft.com](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
+- [Quickstart Blobs CLI](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-cli)
+- [Container permissions](https://learn.microsoft.com/en-us/cli/azure/storage/container?view=azure-cli-latest#az-storage-container-set-permission)
