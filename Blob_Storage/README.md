@@ -166,7 +166,7 @@ az login
 az storage account create --name tech254irinastorage --resource-group tech254 --location uksouth --sku Standard_ZRS 
 ```
 
-![AltText](Images/storage.png)
+![AltText](Images/account.png)
 
 2. Then we will create the container:
 
