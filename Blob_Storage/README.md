@@ -154,8 +154,98 @@ az login
 ![AltText](Images/13.png)
 
 
+<br>
+
+### Adding a Blob to our App Home Page:
+
+ #### You will need to have the right permissions to containers and blobs.
+
+1. First we will create the Storage Account:
+
+```shell
+az storage account create --name tech254irinastorage --resource-group tech254 --location uksouth --sku Standard_ZRS 
+```
+
+![AltText](Images/storage.png)
+
+2. Then we will create the container:
+
+```shell
+az storage container create \
+ --account-name tech254irinastorage \
+ --name testcontainer \
+ --auth-mode login
+```
+![AltText](Images/container_confirmed.png)
+
+3. Download a photo to the VM:
+
+```shell
+curl -O https://img.freepik.com/free-photo/cyber-cat-with-giant-electro-flowers-sunrise-generative-ai_8829-2880.jpg
+```
+![AltText](Images/photo.png)
+
+4. You can rename the photo:
+
+```shell
+mv cyber-cat-with-giant-electro-flowers-sunrise-generative-ai_8829-2880.jpg cat.jpg
+```
+
+4. Upload the photo as a blob:
+
+```shell
+az storage blob upload \
+ --account-name tech254irinastorage \
+ --container-name testcontainer \
+ --name newcat.jpg \
+ --file cat.jpg \
+ --auth-mode login
+```
+
+![AltText](Images/upload.png)
+
+5. If you want to see it has been uploaded successfully, go to Storage and click on your container:
+
+![AltText](Images/storage.png)
 
 
+![AltText](Images/container.png)
+
+![AltText](Images/blobs.png)
+
+6. Go to the location of the `index.ejs` where we will modify it to display the `cat.jpg` photo on the Home Page:
+
+```shell
+cd /ci_cd/app/views
+```
+
+6. You can try modifying the `index.ejs` file with the `sed` command:
+
+```shell
+sed -i 's|</h2>|</h2><img src="
+https://tech254irinastorage.blob.core.windows.net/testcontainer/newcat.jpg">|' index.ejs
+```
+
+7. If it doesn't work, you can modify it manually:
+
+```shell
+sudo nano index.ejs
+```
+
+8. Add the image code to the file:
+
+```shell
+<img src="https://tech254irinastorage.blob.core.windows.net/testcontainer/newcat.jpg">
+```
+
+![AltText](Images/nano_index.png)
+
+8. Restart the app for your modification to be displayed: 
+
+```shell
+pm2 restart app.js
+```
+![AltText](Images/cat_app.png)
 
 <br>
 
